@@ -22,7 +22,6 @@ require 'erb'
 require 'pry'
 require 'pry-byebug'
 require 'bcrypt'
-require 'rMeetup'
 
 
 # Some helper constants for path-centric logic
