@@ -81,5 +81,9 @@ get '/events/:id' do
   @event = Event.find_by_id(params[:id])
   @post_owner = User.find_by_id(@event.user_id)
   @committers = Commitment.all
+  json_string_response = open("https://maps.googleapis.com/maps/api/geocode/json?address=" + @event[:address].gsub(/ /, '+') + "&key=AIzaSyDGh4J2RKsYF8c83RREWX-h10VW1TLMbwE").read
+  ruby_hash_response = JSON.parse(json_string_response)
+  @lat = ruby_hash_response["results"][0]["geometry"]["bounds"]["northeast"]["lat"]
+  @lng = ruby_hash_response["results"][0]["geometry"]["bounds"]["northeast"]["lng"]
   erb :'events/show_single'
 end
