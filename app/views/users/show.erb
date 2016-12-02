@@ -12,7 +12,11 @@
   <hr>
   <ul>
   <h5 class="profile-content">Here are your upcoming hosted events:</h5>
-
+    <ul>
+      <% @user.events.upcoming.order(starts_at: :asc).each do |event| %>
+      <li><a href="/events/<%=event.id%>"><%= event.starts_at %> - <%= event.title %></a></li>
+      <% end %>
+    </ul>
   </ul>
   <hr>
 </div>
@@ -21,7 +25,11 @@
   <hr>
   <ul>
   <h5 class="profile-content">Here are your previously hosted events:</h5>
-
+  <ul>
+    <% @user.events.previous.order(starts_at: :asc).each do |event| %>
+    <li><a href="/events/<%=event.id%>"><%= event.starts_at %> - <%= event.title %></a></li>
+    <% end %>
+  </ul>
   </ul>
   <hr>
 </div>
