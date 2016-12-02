@@ -15,8 +15,8 @@ helpers do
     logged_in? && current_user == user
   end
 
-  # def post_owner(post_id)
-  #   User.find_by_id(Event.find_by_id(event_id).user_id)
-  # end
+  def post_owner(event_id)
+    User.find_by_id(Event.find_by_id(event_id).user_id)
+  end
 
 end
