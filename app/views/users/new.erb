@@ -1,0 +1,50 @@
+<div class="">
+  <%= erb :'_errors' %>
+</div>
+
+<div class="container">
+  <form class="" action="/users" method="post">
+
+    <div class="row">
+      <div class="input-field col s6">
+        <div class="input-field col s6">
+          <input type="text" name="user[first_name]" id="" placeholder="John" class="validate">
+          <label class="active" for="first_name">First Name:</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="text" name="user[last_name]" id="" placeholder="Doe" class="validate">
+          <label class="active" for="first_name">Last Name:</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <div class="input-field col s12">
+          <input type="text" name="user[username]" id="" placeholder="Enter desired username">
+          <label class="active" for="username">Username:</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="text" name="user[email]" id="" placeholder="Enter email address">
+          <label class="active" for="email">Email:</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="text" name="user[location]" id="" placeholder="Jersey City, NJ">
+          <label class="active" for="location">Location:</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="text" name="user[motorcycle]" id="" placeholder="2017 Yamaha R1">
+          <label class="active" for="motorcycle">Your ride:</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="password" name="user[password]" id="" placeholder="Enter password">
+          <label class="active" for="password">Password:</label>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <input class="waves-effect waves-teal btn-flat white-text" type="submit" name="" id="" value="Register">
+    </div>
+
+  </form>
+</div>

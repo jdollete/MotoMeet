@@ -1,3 +1,11 @@
 nav {
   font-family: 'Special Elite', serif;
 }
+
+body {
+  background-color: #3D4047;
+}
+
+.form-text {
+  font-size: 5em;
+}
