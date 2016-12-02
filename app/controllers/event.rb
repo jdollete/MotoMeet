@@ -14,9 +14,10 @@ get '/events/new' do
 end
 
 post '/events' do
+  binding.pry
   if logged_in?
     @event = Event.new(params[:event])
-    @event.user_id = current_user.id
+    @event.assign_attributes(address: "#{params[:street_address]}, #{params[:city]}, #{params[:state]}", user_id: current_user.id)
       if @event.save
         redirect "/events/#{@event.id}"
       else
