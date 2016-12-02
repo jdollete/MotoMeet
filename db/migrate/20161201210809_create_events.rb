@@ -5,6 +5,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :body, null: false
       t.string :address, null: false
       t.datetime :starts_at, null: false
+      t.references :user, foreign_key: true, index: true
 
       t.datetime(null:false)
     end
