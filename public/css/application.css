@@ -9,3 +9,29 @@ body {
 .form-text {
   font-size: 5em;
 }
+
+#logout {
+     background:none!important;
+     border:none;
+     padding:0!important;
+     font: inherit;
+}
+
+.text-title {
+  font-family: 'Advent Pro', sans-serif;
+  color: white;
+}
+
+.profile-info {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#profile-title-div {
+  margin-left: 25px;
+}
+
+#profile-info-div {
+  margin-bottom: 50px;
+  margin-left: 35px;
+}
