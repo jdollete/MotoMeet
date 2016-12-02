@@ -1,49 +1,51 @@
-<div class="">
+<div class="title-div">
   <%= erb :'_errors' %>
 </div>
 
+<div class="title-div">
+  <p><h2 class="text-title">Create Your Event!</h2></p>
+</div>
+
 <div class="container">
-  <form class="" action="/users" method="post">
+  <form class="col s12" action="/events" method="post">
 
     <div class="row">
       <div class="input-field col s6">
+        <div class="input-field col s12">
+          <input type="text" name="event[title]" id="" placeholder="">
+          <label class="active" for="title">Event Name:</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="text" name="event[body]" id="" placeholder="">
+          <label class="active" for="body">Description:</label>
+        </div>
+        <div class="input-field col s12">
+          <label class="active" for="starts_at">Starting time:</label>
+          <input type="datetime-local" name="event[starts_at]">
+        </div>
+
         <div class="input-field col s6">
-          <input type="text" name="user[first_name]" id="" placeholder="John" class="validate">
-          <label class="active" for="first_name">First Name:</label>
+          <input type="text" name="street_address" id="" placeholder="800 Madison" class="validate">
+          <label class="active" for="street_address">Address:</label>
         </div>
         <div class="input-field col s6">
-          <input type="text" name="user[last_name]" id="" placeholder="Doe" class="validate">
-          <label class="active" for="first_name">Last Name:</label>
+          <input type="text" name="city" id="" placeholder="Hoboken" class="validate">
+          <label class="active" for="city">City:</label>
+        </div>
+        <div class="input-field col s2">
+          <input type="text" name="state" id="" placeholder="NJ" class="validate">
+          <label class="active" for="state">State:</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="text" name="zipcode" id="" placeholder="07030" class="validate">
+          <label class="active" for="zipcode">Zip-code:</label>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s6">
-        <div class="input-field col s12">
-          <input type="text" name="user[username]" id="" placeholder="Enter desired username">
-          <label class="active" for="username">Username:</label>
-        </div>
-        <div class="input-field col s12">
-          <input type="text" name="user[email]" id="" placeholder="Enter email address">
-          <label class="active" for="email">Email:</label>
-        </div>
-        <div class="input-field col s12">
-          <input type="text" name="user[location]" id="" placeholder="Jersey City, NJ">
-          <label class="active" for="location">Location:</label>
-        </div>
-        <div class="input-field col s12">
-          <input type="text" name="user[motorcycle]" id="" placeholder="2017 Yamaha R1">
-          <label class="active" for="motorcycle">Your ride:</label>
-        </div>
-        <div class="input-field col s12">
-          <input type="password" name="user[password]" id="" placeholder="Enter password">
-          <label class="active" for="password">Password:</label>
-        </div>
-      </div>
+
     </div>
 
     <div>
-      <input class="waves-effect waves-teal btn-flat white-text" type="submit" name="" id="" value="Register">
+      <input class="waves-effect waves-teal btn-flat white-text" type="submit" name="" id="" value="Post">
     </div>
 
   </form>

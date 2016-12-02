@@ -6,6 +6,10 @@ body {
   background-color: #3D4047;
 }
 
+.nav-logo {
+  margin-left: 25px;
+}
+
 .form-text {
   font-size: 5em;
 }
@@ -15,10 +19,12 @@ body {
      border:none;
      padding:0!important;
      font: inherit;
+     margin-right: 25px;
 }
 
 .text-title {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: 'Alfa Slab One', sans-serif;
+  letter-spacing: 4px;
   color: white;
 }
 
@@ -27,11 +33,16 @@ body {
   margin-bottom: 3px;
 }
 
-#profile-title-div {
+.title-div {
   margin-left: 25px;
 }
 
 #profile-info-div {
   margin-bottom: 50px;
   margin-left: 35px;
+}
+
+.profile-content {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
 }
