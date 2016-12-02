@@ -11,7 +11,7 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -22,7 +22,7 @@
 <body>
   <nav>
     <div class="nav-wrapper blue">
-      <a href="/" class="brand-logo">MotoMeetUp</a>
+      <a id="nav-title" href="/" class="brand-logo">MotoMeetUp</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       <% if logged_in? %>
         <li><a href="/users/<%=current_user.id%>"><%= current_user.username %></a></li>
