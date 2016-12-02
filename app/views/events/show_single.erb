@@ -26,3 +26,14 @@
     <% end %>
   </div><br><br>
 </div>
+
+<% if logged_in? %>
+  <div class="container">
+    <form class="" action="/commitments/<%=current_user.id%>/events/<%=@event.id%>" method="post">
+      <input class="waves-effect waves-teal btn-flat col  white-text" type="submit" name="" value="Click here to RSVP!">
+    </form>
+  </div>
+<%end%><br><br><br>
+<div class="title-div">
+  <p><h2 class="text-title">Riders Attending</h2><p>
+</div>
