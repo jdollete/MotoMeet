@@ -1,0 +1,28 @@
+<div class="">
+  <%= erb :'_errors' %>
+</div>
+
+<div class="title-div">
+  <p><h2 class="text-title">Event Details</h2><p>
+</div>
+
+<div id="event-info-div" class="event-content">
+  <p><h5 class="event-info ">Name: <%=@event.title%></h5><p>
+  <p><h5 class="event-info ">Location: <%=@event.address%></h5><p>
+  <p><h5 class="event-info ">Starts At: <%=@event.starts_at%></h5><p>
+  <p><h5 class="event-info ">Host: <%=@post_owner.username%></h5>
+</div>
+<div class="row">
+  <div class="container">
+    <% if authorized?(@post_owner) %>
+      <form class="" action="/events/<%=@event.id%>/edit" method="get">
+      <input class="waves-effect waves-teal btn-flat col white-text" type="submit" name="" value="Edit">
+      </form>
+
+      <form class="" action="/events/<%=@event.id%>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input class="waves-effect waves-teal btn-flat col  white-text" type="submit" name="" value="Delete">
+      </form>
+    <% end %>
+  </div><br><br>
+</div>

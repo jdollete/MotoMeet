@@ -1,0 +1,9 @@
+<div class="title-div">
+  <p><h2 class="text-title">Upcoming Events:</h2></p>
+</div>
+
+<div class="container">
+  <% @events.each do |event| %>
+    <li><a href="events/<%=event.id%>"><%=event.state%> - <%=event.title%> - <%=event.starts_at%></a></li>
+  <% end %>
+</div>

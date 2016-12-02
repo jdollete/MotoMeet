@@ -7,12 +7,12 @@ class Event < ActiveRecord::Base
 
   def self.upcoming
     current_time = DateTime.current
-    where("start_at >= ?", current_time)
+    where("starts_at >= ?", current_time)
   end
 
   def self.previous
     current_time = DateTime.current
-    where("start_at < ?", current_time)
+    where("starts_at < ?", current_time)
   end
 
 end

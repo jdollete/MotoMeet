@@ -6,6 +6,11 @@ body {
   background-color: #3D4047;
 }
 
+/*a {
+  color: white;
+  text-decoration: none;
+}*/
+
 .nav-logo {
   margin-left: 25px;
 }
@@ -33,6 +38,11 @@ body {
   margin-bottom: 3px;
 }
 
+.event-info {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
 .title-div {
   margin-left: 25px;
 }
@@ -42,7 +52,17 @@ body {
   margin-left: 35px;
 }
 
+#event-info-div {
+  margin-bottom: 50px;
+  margin-left: 35px;
+}
+
 .profile-content {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
+.event-content {
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
 }

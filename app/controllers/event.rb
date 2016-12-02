@@ -1,5 +1,5 @@
 get '/events' do
-  @events = Event.upcoming.order(start_at: :asc)
+  @events = Event.upcoming.order(starts_at: :asc)
   erb :'events/show'
 end
 
@@ -14,10 +14,9 @@ get '/events/new' do
 end
 
 post '/events' do
-  binding.pry
   if logged_in?
     @event = Event.new(params[:event])
-    @event.assign_attributes(address: "#{params[:street_address]}, #{params[:city]}, #{params[:state]}", user_id: current_user.id)
+    @event.assign_attributes(address: "#{params[:street_address]}, #{params[:city]}, #{params[:state]}", state: params[:state], user_id: current_user.id)
       if @event.save
         redirect "/events/#{@event.id}"
       else
@@ -79,6 +78,6 @@ end
 get '/events/:id' do
   @event = Event.find_by_id(params[:id])
   @post_owner = User.find_by_id(@event.user_id)
-  @commiters = Commitment.all
-  erb :'events/show'
+  @committers = Commitment.all
+  erb :'events/show_single'
 end
