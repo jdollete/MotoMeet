@@ -1,0 +1,48 @@
+<div class="title-div">
+  <%= erb :'_errors' %>
+</div>
+
+<div class="title-div">
+  <p><h2 class="text-title">Edit Your Event</h2></p>
+</div>
+
+<div class="container">
+  <form class="col s12" action="/events/<%=@event.id%>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <div class="row">
+      <div class="input-field col s6">
+        <div class="input-field col s12">
+          <input type="text" name="event[title]" id="" placeholder="" value="<%= @event.try(:title) %>">
+          <label class="active" for="title">Event Name:</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="text" name="event[body]" id="" placeholder="" value="<%= @event.try(:body) %>">
+          <label class="active" for="body">Description:</label>
+        </div>
+        <div class="input-field col s12">
+          <label class="active" for="starts_at">Starting time:</label>
+          <input type="datetime-local" name="event[starts_at]">
+        </div>
+
+        <div class="input-field col s6">
+          <input type="text" name="street_address" id="" class="validate" value="<%= @event.try(:street_address) %>">
+          <label class="active" for="street_address">Address:</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="text" name="city" id="" class="validate" value="<%= @event.try(:city) %>">
+          <label class="active" for="city">City:</label>
+        </div>
+        <div class="input-field col s2">
+          <input type="text" name="state" id="" class="validate" value="<%= @event.try(:state) %>">
+          <label class="active" for="state">State:</label>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <input class="waves-effect waves-teal btn-flat white-text" type="submit" name="" value="Update">
+    </div>
+
+  </form>
+</div>

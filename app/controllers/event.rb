@@ -47,7 +47,9 @@ put '/events/:id' do
   post_owner = User.find_by_id(Event.find_by_id(params[:id]).user_id)
   if authorized?(post_owner)
     @event = Event.find_by_id(params[:id])
-    @event.assign_attributes(params[:potluck])
+    binding.pry
+    @event.assign_attributes(params[:event])
+    @event.assign_attributes(address: "#{params[:street_address]}, #{params[:city]}, #{params[:state]}", state: params[:state], user_id: current_user.id)
     if @event.save
       redirect "/events/#{@event.id}"
     else
