@@ -1,7 +1,16 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  // function myMap() {
+  //   var myCenter = new google.maps.LatLng(40.7205238,-74.0431689);
+  //   var mapCanvas = document.getElementById("map");
+  //   var mapOptions = {center: myCenter, zoom: 20};
+  //   var map = new google.maps.Map(mapCanvas, mapOptions);
+  //   var marker = new google.maps.Marker({position:myCenter});
+  //   marker.setMap(map);
+  //
+  //   var infowindow = new google.maps.InfoWindow({
+  //     content: "Hello World!"
+  //   });
+  //   infowindow.open(map,marker);
+  // }
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+$(document).ready(function() {
 });

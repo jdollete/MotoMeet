@@ -22,6 +22,8 @@ require 'erb'
 require 'pry'
 require 'pry-byebug'
 require 'bcrypt'
+require 'open-uri'
+require 'json'
 
 
 # Some helper constants for path-centric logic
